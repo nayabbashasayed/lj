@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for i in $(find . -iname '*.html')
+do
+	echo $i
+	sed -i -e 's#https://www\.pubservice\.com/[^"]*#../../index.html#' $i
+done
+
